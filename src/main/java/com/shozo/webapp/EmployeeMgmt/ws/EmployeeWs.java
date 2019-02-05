@@ -23,8 +23,8 @@ import io.swagger.annotations.ApiResponses;
 @Api(value="List of Employee",description= "Fetching list of employees")
 public class EmployeeWs {
 	
-	int a = 20;
-	List<String> myList = new ArrayList<String>(Arrays.asList("shozo","pozo"));
+	int a = 80;
+	List<String> myList = new ArrayList<String>(Arrays.asList("shozo","pozo","Frodo"));
 	
 	@Autowired
 	EmployeeService employeeService;
