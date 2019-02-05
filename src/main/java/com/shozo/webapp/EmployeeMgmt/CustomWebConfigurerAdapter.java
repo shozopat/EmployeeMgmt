@@ -1,3 +1,4 @@
+/*
 package com.shozo.webapp.EmployeeMgmt;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -21,3 +22,4 @@ public class CustomWebConfigurerAdapter extends WebSecurityConfigurerAdapter {
 	}
 		
 }
+*/

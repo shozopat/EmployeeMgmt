@@ -13,8 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.shozo.webapp.EmployeeMgmt.entities.Employee;
 import com.shozo.webapp.EmployeeMgmt.service.EmployeeService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 @RequestMapping(value="employee")
+@Api(value="List of Employee",description= "Fetching list of employees")
 public class EmployeeWs {
 	
 	int a = 20;
@@ -36,6 +42,9 @@ public class EmployeeWs {
 	}
 	
 	@RequestMapping(value="all",produces="application/json",method=RequestMethod.GET)
+	@ApiOperation(value="List of Employees",response=List.class)
+	@ApiResponses(value= {@ApiResponse(code=200,message="Successfully retreived List"),
+						  @ApiResponse(code=500,message="Server side failure")})
 	public List<Employee> getAllEmployees() {
 		
 		System.out.println("reached in getAllEmployees ");
